@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<hmtl lang = "es">
+    <head>
+        <title>Carta</title>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+
+        <script> 
+        	window.addEventListener("load", cargaPagina);
+			function cargaPagina() {
+    			var btn = document.getElementById("boton1").addEventListener("click", myFunction);
+    		}
+        	var clicks = 0; 
+        	function myFunction() { 
+        		var inputNombre = document.getElementById("Gaseosa");
+    
+    			inputNombre.value = clicks += 1;
+    			document.getElementById("demo").innerHTML = clicks;
+        } </script> 
+        <script>
+         	window.addEventListener("load", cargaPagina);
+			function cargaPagina() {
+    			var btn = document.getElementById("boton2").addEventListener("click", myFunctio);
+    		}
+         	var click = 0; 
+     		function myFunctio() {
+     			var inputNombre = document.getElementById("Cerveza");
+
+     			inputNombre.value = click += 1;
+     			document.getElementById("dem").innerHTML = click; } 
+     		</script> 
+        <script>
+        	window.addEventListener("load", cargaPagina);
+			function cargaPagina() {
+    		var btn = document.getElementById("boton3").addEventListener("click", myFuncti);
+    	}
+
+         	var clic = 0; 
+         	function myFuncti() { 
+         		var inputNombre = document.getElementById("Pizza Muzarrella");
+
+         		inputNombre.value = clic += 1
+         		document.getElementById("de").innerHTML = clic; } 
+         </script> 
+        <script> 
+        	window.addEventListener("load", cargaPagina);
+			function cargaPagina() {
+    			var btn = document.getElementById("boton4").addEventListener("click", myFunct);
+    		}
+
+        	var cli = 0; 
+        	function myFunct() {
+        		var inputNombre = document.getElementById("Lomo"); 
+        		
+        		inputNombre.value = cli += 1; 
+        		document.getElementById("d").innerHTML = cli; } 
+        	</script> 
+    </head>
+    
+   <body>
+   	<form action = "http://127.0.0.1:5000/pedidofinalizado" method = "post" class= "container">
+       <h1> Carta </h1>
+       		<h2> Bebidas  &nbsp;&nbsp;  Precios</h2>
+				<input type="hidden" id="Gaseosa" name="Gaseosa" placeholder= "Gaseosa">
+        		
+        		<button class="boton_personalizado" type="button" id="boton1" name="boton1" value= {{name1}} >{{name1}}</button> 
+        	
+
+        		<div class="name">
+        		{{preciogaseosa}}
+        		</div>
+        		<div class="cantidad">
+        		<p id="demo">0</p>
+        		</div>
+
+        		<input type="hidden" id="Cerveza" name="Cerveza" placeholder= "Cerveza">
+        		
+        		<button class="boton_personalizado" type="button" id="boton2" name="boton2" value= {{name2}} >{{name2}}
+        			
+        		</button>
+        		
+        		<div class="name"> 
+        			{{preciocerveza}}
+        		</div>
+        		<div class="cantidad">
+        		<p id="dem">0</p>
+        		</div>
+
+       		<h3> Comidas </h3>
+       			<input type="hidden" id="Pizza Muzarrella" name="Pizza Muzarrella" placeholder= "Pizza Muzarrella">
+
+        		<button class="boton_personalizado" type="button" id="boton3" name="boton3" value= {{name0}} >{{name0}}</button> 
+        		
+        		<div class="name">
+        			{{preciopizza}}
+       			</div>
+       			<div class="cantidad">
+       			<p id="de">0</p>  
+       			</div>
+
+       			<input type="hidden" id="Lomo" name="Lomo" placeholder= "Lomo">
+        		
+        		<button class="boton_personalizado" type="button" id="boton4" name="boton4" value= {{name3}} >{{name3}}</button> 
+        		
+        		<div class="name">
+        		{{preciolomo}}
+        		</div>
+				<div class="cantidad">
+				<p id="d">0</p>
+				</div>
+
+				<input type = "text" name = "Observaciones" placeholder = "Observaciones" /><br><br>
+				<input type = "hidden" name = "Numero de mesa" placeholder = "Numero de mesa" value={{mesa}} />
+				<input type = "hidden" name = "DNI" placeholder = "DNI" value={{DNI}} />
+
+	<button class="boton_personalizad" type = "submit"/>Enviar datos</button>
+   </form>
+   <br><br>
+   <form action = "http://127.0.0.1:5000/mozo" method = "post" class= "container">
+       		<input type = "hidden" name = "DNI" placeholder = "DNI" value={{DNI}} />
+       		<DIV ALIGN=center><button class="boton_personalizad" type = "submit" value = "Volver"/>Volver a las opciones</button></DIV>
+            </form>
+            <br><br>
+   <form action = "http://127.0.0.1:5000/pedido" method = "post" class= "container">
+       		<input type = "hidden" name = "DNI" placeholder = "DNI" value={{DNI}} />
+       		<DIV ALIGN=center><button class="boton_personalizad" type = "submit" value = "Volver"/>Volver a elegir mesa</button></DIV>
+            </form>
+   </body>
+
+   

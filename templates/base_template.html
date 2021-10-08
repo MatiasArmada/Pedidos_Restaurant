@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<hmtl lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %}</title>
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+	{% block content %} {% endblock %}
+		<div class= "myDiv">
+			<br><br><a class="boton_personalizad" href = "{{ url_for('inicio') }}" >Inicio</a><br><br>
+		</div>
+</body>
+</html>		

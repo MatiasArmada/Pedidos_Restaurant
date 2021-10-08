@@ -1,0 +1,204 @@
+body
+{
+    background-color: #512301; /* La página de fondo será negra */
+    color: #ffd200; /*El texto de la página será blanco */
+    font-family: 'MS Reference Sans Serif';
+    text-align: center;
+    text-decoration: none;
+    background-image: url('../img/unnamed_(1).jpg');
+    background-size: cover; 
+    height: 1px;
+}
+
+h1{
+	text-align: center;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+h3{
+	position:relative; left:-55px;
+  	position:relative; top:-5px;
+  	font-size: 150%
+
+}
+.boton_personalizad{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #944002;
+    border-radius: 6px;
+    border: 1px solid #542400;
+    transition: all 0.5s ease;
+  	
+  }
+  .boton_personalizad:hover{
+    color: #fcff09;
+    background-color: #f46903;
+  }
+
+
+
+.boton_personalizado{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #944002;
+    border-radius: 6px;
+    border: 1px solid #542400;
+  	position:relative; left:-60px;
+  	transition: all 0.5s ease;
+  }
+  .boton_personalizado:hover{
+    color: #fcff09;
+    background-color: #f46903;
+  }
+.name{
+	text-align: right;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	position:relative; left: 680px;
+  	position:relative; top: -31px;
+  	width: 0px;
+}
+
+.Numpedido{
+
+  	text-align: center;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	position:relative; left:-520px;
+  	position:relative; top:0px;
+	
+}
+
+.Nummesa{
+
+  	text-align: right;
+  	display: flex;
+  	justify-content: center;
+  	position:relative; left:-250px;
+  	position:relative; top:-38px;
+
+	
+}
+.Item{
+  	text-align: center;
+  	display: flex;
+  	justify-content: center;
+  	position:relative; left: 800px;
+  	position:relative; top:-117px;
+  	width: 50px
+  	
+	
+}
+.DNI{
+  	text-align: right;
+  	display: flex;
+  	justify-content: center;
+  	position:relative; left: -20px;
+  	position:relative; top:-77px;
+	
+}
+.BP{
+	position:relative; left:-40px;
+  	position:relative; top:-30px;
+  	font-size: 150%
+}
+.NumpedidoN{
+
+  	text-align: center;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	position:relative; left:-345px;
+  	position:relative; top:15px;
+  	height: 1px;
+	
+}
+.NombreN{
+
+  	text-align: center;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	position:relative; left:-158px;
+  	position:relative; top:-25px;
+  	height: 1px;
+	
+}
+.Observacion{
+
+  	text-align: center;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	position:relative; left:545px;
+  	position:relative; top:-60px;
+  	height: 1px;
+  	width: 100px;
+	
+}
+.NumItemN{
+
+  	text-align: center;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	position:relative; left:680px;
+  	position:relative; top:-88px;
+  	height: 1px;
+  	width: 100px;
+	
+}
+.EstadoN{
+
+  	text-align: center;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	position:relative; left:845px;
+  	position:relative; top:-47px;
+  	height: 1px;
+  	width: 100px;
+	
+}
+.Check{
+
+  	text-align: center;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	position:relative; left:955px;
+  	position:relative; top:-108px;
+  	height: 1px;
+  	width: 100px;
+	
+}
+.cantidad{
+
+  	text-align: center;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	position:relative; left:785px;
+  	position:relative; top:-40px;
+  	height: 1px;
+  	width: 1px
+ }
+ .cobrar{
+ 	text-align: center;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	position:relative; left:950px;
+  	position:relative; top:-250px;
+  	height: 1px;
+  	width: 1px	
+ }

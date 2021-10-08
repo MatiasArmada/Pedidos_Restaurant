@@ -1,0 +1,63 @@
+{% extends "base_template.html" %}
+<!DOCTYPE html>
+<hmtl lang = "es">
+{% block content %}
+    <head>
+        <h1>{% block title %}Pedidos pendientes{% endblock %}</h1>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    </head>
+    <body>
+    <form action = "http://127.0.0.1:5000/cambio" method = "post" class= "container">
+    	Numero de pedido &nbsp;&nbsp;&nbsp;&nbsp; Nombre del pedido &nbsp;&nbsp; Observacion &nbsp;&nbsp; Numero de Item &nbsp;&nbsp; Estado del pedido &nbsp;&nbsp; Listo
+    	{% for pedido in pedidos %}
+    		{% if pedido.NumPedido in Lista %}
+    			<br>
+    			<div class="NumpedidoN">
+    			{% print pedido.NumPedido %}
+    			</div>
+    			<br>
+    			{% for item in pedido.item1 %}
+    				{% if item.NumPedido in Lista %}
+    					
+    					{% for pro in productos%}
+    						{% if item.NumProducto == pro.NumProducto %}
+    						<br>
+    						<div class="NombreN">
+    						{% print pro.Nombre%}
+    						</div>
+    						<br>
+    						<div class="EstadoN">
+    						{% print item.Estado%}
+    						</div>
+    						<br>
+    						<div class="Observacion">
+    						{% print pedido.Observacion%}
+    						</div>
+    						<br>
+    						<div class="NumItemN">
+    						{% print item.NumItem%}
+    						</div>
+    						<br>
+    							{% if item.Estado == 'Pendiente' %}
+    								<div class="Check">
+    									<input type="checkbox" id="{{item.NumItem}}" value="{{item.NumItem}}" name="Listo">
+    								</div>
+    							{%else%}
+									<div class="Check">
+    									Listo
+    								</div>    								
+    							{%endif%}
+    						{%endif%}
+    					{%endfor%}
+    				{%endif%}
+    			{%endfor%}
+    			
+    		{%endif%}
+    	{%endfor%}
+		<br><br><br>
+    	<button class="boton_personalizad" type = "submit"/>Ya esta listo</button>
+    </form>
+    <META HTTP-EQUIV="REFRESH" CONTENT="30;URL=http://127.0.0.1:5000/listapedidos">
+    </body>
+</hmtl>
+{% endblock %}

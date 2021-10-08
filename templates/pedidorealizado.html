@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<hmtl lang = "es">
+	<head>
+        <title>Pedido realizado</title>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    </head>
+    <body>
+       <h1> Pedido realizado </h1>
+       <form action = "http://127.0.0.1:5000/mozo" method = "post" class= "container">
+       		<input type = "hidden" name = "DNI" placeholder = "DNI" value={{DNI}} />
+       		<button class="boton_personalizad" type = "submit"/> Volver </button>
+       </form>
+    </body>

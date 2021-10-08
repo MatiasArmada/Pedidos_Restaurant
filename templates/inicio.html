@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bienvenido</title>
+ 		<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+ 	</head>
+ 	<body>
+ 		<br><br><br><br><br>
+ 		<h1>
+ 		<DIV ALIGN=center>Inicio de Sesión</DIV><br><br>
+ 		</h1>
+		<form action = "http://127.0.0.1:5000/bienvenida" method = "post" class= "container">
+ 			<DIV ALIGN=center><label for = "DNI" >DNI</label></DIV><br>
+ 			<DIV ALIGN=center><input type = "text" name = "DNI" placeholder = "DNI" /></DIV><br><br>
+
+ 			<DIV ALIGN=center><label for = "Clave">Clave</label></DIV><br>
+ 			<DIV ALIGN=center><input type = "password" name = "Clave" placeholder = "Clave"/></DIV><br><br>
+ 			
+ 			<DIV ALIGN=center><button class="boton_personalizad" type = "submit" /> Iniciar Sesión </button></DIV>
+ 			<br><br>
+ 		</form>	
+ 	</body>
+</html>

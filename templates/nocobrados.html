@@ -1,0 +1,67 @@
+{% extends "base_template.html" %}
+<!DOCTYPE html>
+<hmtl lang = "es">
+{% block content %}
+    <head>
+        <DIV ALIGN=center><h1>{% block title %}Lista de no cobrados{% endblock %}</h1></DIV>
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    </head>
+    <body>
+    <form action = "http://127.0.0.1:5000/venta" method = "post" class= "container">
+    {% for pedido in pedidos %}
+    	{% if pedido.Cobrado == "False" %}
+    	<br>
+        <div class="Numpedido"> 
+            Número de pedido
+        </div> 
+        <div class="Numpedido">
+            {% print pedido.NumPedido %}
+        </div>
+
+        <div class="Nummesa">
+            Número de mesa
+        </div>
+        <div class="Nummesa">
+            {% print pedido.Mesa %}
+        </div>
+
+        <div class="DNI">
+            Dni del mozo
+        </div>
+        <div class="DNI">
+            {% print pedido.DNIMozo %}
+        </div>
+        <div class="Item">
+            Item:
+        </div>
+        <div class="Check">
+            <input type="checkbox" id="{{pedido.NumPedido}}" value="{{pedido.NumPedido}}" name="Listo">
+        </div>
+        {% for item in items %}
+        	{% if item.NumPedido == pedido.NumPedido %}
+        		
+                {% for producto in productos %}
+                	{% if item.NumProducto == producto.NumProducto %}
+                        <div class="Item">
+                		{% print producto.Nombre %}</div>
+                        
+                	{% endif %}
+
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    	{% endif %}
+    {% endfor %}
+    <input type = "hidden" name = "DNI" placeholder = "DNI" value={{DNI}} />
+    
+    <button class="boton_personalizad" type = "submit"/>Cobrar</button>
+        
+    </form>
+    <br><br><br>
+    
+    <form action = "http://127.0.0.1:5000/mozo" method = "post" class= "container">
+       		<input type = "hidden" name = "DNI" placeholder = "DNI" value={{DNI}} />
+       		<DIV ALIGN=center><button class="boton_personalizad" type = "submit" value = "Volver"/>Volver</button></DIV>
+            </form>
+	</body>
+{% endblock %}

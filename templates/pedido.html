@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<hmtl lang = "es">
+	<head>
+        <title>Hola Mozo</title>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+         
+    </head>
+    
+   <body>
+       <h1> Ingrese la mesa </h1>
+       <form action = "http://127.0.0.1:5000/cartamozo" method = "post" class= "container">
+       		<label for = "Numero de mesa" >Numero de mesa</label><br>
+ 			<input type = "number" name = "Numero de mesa" placeholder = "Numero de mesa" /><br><br>
+ 			<input type = "hidden" name = "DNI" placeholder = "DNI" value={{DNI}} />
+       		<button class="boton_personalizad" type = "submit"/> Ingresar mesa </button>
+   		</form>
+   		<br><br><br>
+   		<form action = "http://127.0.0.1:5000/mozo" method = "post" class= "container">
+       		<input type = "hidden" name = "DNI" placeholder = "DNI" value={{DNI}} />
+       		<DIV ALIGN=center><button class="boton_personalizad" type = "submit" value = "Volver"/>Volver</button></DIV>
+            </form>
+   </body>

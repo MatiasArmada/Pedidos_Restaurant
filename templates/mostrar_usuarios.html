@@ -1,0 +1,32 @@
+{% extends "base_template.html" %}
+{% block title %}Usuarios{% endblock %}
+{% block content %}
+<head>
+        <title>Cambio hecho</title>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<h1> Usuarios Registrados </h1>
+	<hr/>
+	<div class="container">
+	<table>
+		<thead>
+			<tr>
+				<th>DNI</th>
+				<th>Tipo</th>
+			</tr>
+		</thead>
+
+		<tbody>						
+			{% for usuario in usuarios %}
+    			{% if usuario.Tipo == "Mozo" %}
+    				<tr>
+    					<td> {{ usuario.DNI }} </td>
+    					<td> {{ usuario.Tipo }} </td>
+    				</tr>
+        		{% endif %}	
+			{% endfor %}
+		</tbody>
+	</table>
+	<br><br>
+	</div>
+{% endblock %}		

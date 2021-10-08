@@ -1,0 +1,28 @@
+{% extends "base_template.html" %}
+<!DOCTYPE html>
+<hmtl lang = "es">
+{% block content %}
+    <head>
+        <title>Hola Mozo</title>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    </head>
+    <br>
+    <h1> 
+    <DIV ALIGN=center>Hola mozo</DIV> 
+    </h1>
+   <body>
+       <form action = "http://127.0.0.1:5000/pedido" method = "post" class= "container">
+       		<input type = "hidden" name = "DNI" placeholder = "DNI" value={{DNI}} />
+       		<br>
+       		<DIV ALIGN=center><button class="boton_personalizad" type = "submit"/>Crear nuevo pedido</button></DIV>
+       		<br>
+    	</form>
+       	<form action = "http://127.0.0.1:5000/listadonocobrados" method = "post" class= "container">
+       		<input type = "hidden" name = "DNI" placeholder = "DNI" value={{DNI}} />
+   			<DIV ALIGN=center><button class="boton_personalizad" type="submit">Listar pedidos no cobrados</button></DIV>
+   			<br>
+   		</form>
+   		
+    </body>
+{% endblock %}
+   
